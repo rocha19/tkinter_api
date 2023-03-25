@@ -12,3 +12,5 @@ pip-selfcheck.json
 
 temp/
 .vscode/
+
+.env
