@@ -1,0 +1,10 @@
+zinc_100 = "#feffff"  # branca
+zinc_300 = "#f0f3f5"  # Preta
+blue_100 = "#e9edf5"   # sky blue
+blue_400 = "#38576b"  # valor
+blue_600 = "#038cfc"   # azul
+green_600 = "#4fa882"  # verde
+green_900 = "#263238"   # + verde
+stone_700 = "#403d3d"   # letra
+orange_500 = "#e06636"   # - profit
+red_500 = "#ef5350"   # vermelha

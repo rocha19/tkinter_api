@@ -1,0 +1,479 @@
+[
+    {
+        "label": "sqlite3",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sqlite3",
+        "description": "sqlite3",
+        "detail": "sqlite3",
+        "documentation": {}
+    },
+    {
+        "label": "connect",
+        "importPath": "connection",
+        "description": "connection",
+        "isExtraImport": true,
+        "detail": "connection",
+        "documentation": {}
+    },
+    {
+        "label": "connect",
+        "importPath": "connection",
+        "description": "connection",
+        "isExtraImport": true,
+        "detail": "connection",
+        "documentation": {}
+    },
+    {
+        "label": "connect",
+        "importPath": "connection",
+        "description": "connection",
+        "isExtraImport": true,
+        "detail": "connection",
+        "documentation": {}
+    },
+    {
+        "label": "connect",
+        "importPath": "connection",
+        "description": "connection",
+        "isExtraImport": true,
+        "detail": "connection",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "ttk",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "messagebox",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "DateEntry",
+        "importPath": "tkcalendar",
+        "description": "tkcalendar",
+        "isExtraImport": true,
+        "detail": "tkcalendar",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "global_color",
+        "description": "global_color",
+        "isExtraImport": true,
+        "detail": "global_color",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "register_user,",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "register_user.",
+        "description": "register_user.",
+        "detail": "register_user.",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "main",
+        "description": "main",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "connect",
+        "kind": 5,
+        "importPath": "src.infra.database.connection",
+        "description": "src.infra.database.connection",
+        "peekOfCode": "connect = sqlite.connect('py-data.db')",
+        "detail": "src.infra.database.connection",
+        "documentation": {}
+    },
+    {
+        "label": "deleteUserDb",
+        "kind": 2,
+        "importPath": "src.infra.database.delete_user",
+        "description": "src.infra.database.delete_user",
+        "peekOfCode": "def deleteUserDb(user: str):\n    parseUserIdToList = [user]\n    with connect:\n        curs = connect.cursor()\n        query = 'DELETE FROM user WHERE id=?'\n        curs.execute(query, parseUserIdToList)",
+        "detail": "src.infra.database.delete_user",
+        "documentation": {}
+    },
+    {
+        "label": "user",
+        "kind": 5,
+        "importPath": "src.infra.database.delete_user",
+        "description": "src.infra.database.delete_user",
+        "peekOfCode": "user = [1]\ndef deleteUserDb(user: str):\n    parseUserIdToList = [user]\n    with connect:\n        curs = connect.cursor()\n        query = 'DELETE FROM user WHERE id=?'\n        curs.execute(query, parseUserIdToList)",
+        "detail": "src.infra.database.delete_user",
+        "documentation": {}
+    },
+    {
+        "label": "findUsers",
+        "kind": 2,
+        "importPath": "src.infra.database.find_user",
+        "description": "src.infra.database.find_user",
+        "peekOfCode": "def findUsers():\n    users = []\n    with connect:\n        curs = connect.cursor()\n        query = 'SELECT * FROM user'\n        curs.execute(query)\n        info = curs.fetchall()\n        for index in info:\n            users.append(index)\n    return users",
+        "detail": "src.infra.database.find_user",
+        "documentation": {}
+    },
+    {
+        "label": "registerUser",
+        "kind": 2,
+        "importPath": "src.infra.database.register_user",
+        "description": "src.infra.database.register_user",
+        "peekOfCode": "def registerUser(user: list):\n    with connect:\n        curs = connect.cursor()\n        curs.execute(\n            'CREATE TABLE IF NOT EXISTS user (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, email TEXT, phone TEXT, date_at DATE, state TEXT, observation TEXT)'\n            )\n        query = 'INSERT INTO user (name, email, phone, date_at, state, observation) VALUES (?, ?, ?, ?, ?, ?)'\n        curs.execute(query, user)\n# user = [\n#     'John Doe', ",
+        "detail": "src.infra.database.register_user",
+        "documentation": {}
+    },
+    {
+        "label": "updateUserDb",
+        "kind": 2,
+        "importPath": "src.infra.database.update_user",
+        "description": "src.infra.database.update_user",
+        "peekOfCode": "def updateUserDb(user: list):\n    print(user)\n    with connect:\n        curs = connect.cursor()\n        query = 'UPDATE user SET name=?, email=?, phone=?, date_at=?, state=?, observation=? WHERE id=?'\n        curs.execute(query, user)",
+        "detail": "src.infra.database.update_user",
+        "documentation": {}
+    },
+    {
+        "label": "zinc_100",
+        "kind": 5,
+        "importPath": "src.view.global_color",
+        "description": "src.view.global_color",
+        "peekOfCode": "zinc_100 = \"#feffff\"  # branca\nzinc_300 = \"#f0f3f5\"  # Preta\nblue_100 = \"#e9edf5\"   # sky blue\nblue_400 = \"#38576b\"  # valor\nblue_600 = \"#038cfc\"   # azul\ngreen_600 = \"#4fa882\"  # verde\ngreen_900 = \"#263238\"   # + verde\nstone_700 = \"#403d3d\"   # letra\norange_500 = \"#e06636\"   # - profit\nred_500 = \"#ef5350\"   # vermelha",
+        "detail": "src.view.global_color",
+        "documentation": {}
+    },
+    {
+        "label": "zinc_300",
+        "kind": 5,
+        "importPath": "src.view.global_color",
+        "description": "src.view.global_color",
+        "peekOfCode": "zinc_300 = \"#f0f3f5\"  # Preta\nblue_100 = \"#e9edf5\"   # sky blue\nblue_400 = \"#38576b\"  # valor\nblue_600 = \"#038cfc\"   # azul\ngreen_600 = \"#4fa882\"  # verde\ngreen_900 = \"#263238\"   # + verde\nstone_700 = \"#403d3d\"   # letra\norange_500 = \"#e06636\"   # - profit\nred_500 = \"#ef5350\"   # vermelha",
+        "detail": "src.view.global_color",
+        "documentation": {}
+    },
+    {
+        "label": "blue_100",
+        "kind": 5,
+        "importPath": "src.view.global_color",
+        "description": "src.view.global_color",
+        "peekOfCode": "blue_100 = \"#e9edf5\"   # sky blue\nblue_400 = \"#38576b\"  # valor\nblue_600 = \"#038cfc\"   # azul\ngreen_600 = \"#4fa882\"  # verde\ngreen_900 = \"#263238\"   # + verde\nstone_700 = \"#403d3d\"   # letra\norange_500 = \"#e06636\"   # - profit\nred_500 = \"#ef5350\"   # vermelha",
+        "detail": "src.view.global_color",
+        "documentation": {}
+    },
+    {
+        "label": "blue_400",
+        "kind": 5,
+        "importPath": "src.view.global_color",
+        "description": "src.view.global_color",
+        "peekOfCode": "blue_400 = \"#38576b\"  # valor\nblue_600 = \"#038cfc\"   # azul\ngreen_600 = \"#4fa882\"  # verde\ngreen_900 = \"#263238\"   # + verde\nstone_700 = \"#403d3d\"   # letra\norange_500 = \"#e06636\"   # - profit\nred_500 = \"#ef5350\"   # vermelha",
+        "detail": "src.view.global_color",
+        "documentation": {}
+    },
+    {
+        "label": "blue_600",
+        "kind": 5,
+        "importPath": "src.view.global_color",
+        "description": "src.view.global_color",
+        "peekOfCode": "blue_600 = \"#038cfc\"   # azul\ngreen_600 = \"#4fa882\"  # verde\ngreen_900 = \"#263238\"   # + verde\nstone_700 = \"#403d3d\"   # letra\norange_500 = \"#e06636\"   # - profit\nred_500 = \"#ef5350\"   # vermelha",
+        "detail": "src.view.global_color",
+        "documentation": {}
+    },
+    {
+        "label": "green_600",
+        "kind": 5,
+        "importPath": "src.view.global_color",
+        "description": "src.view.global_color",
+        "peekOfCode": "green_600 = \"#4fa882\"  # verde\ngreen_900 = \"#263238\"   # + verde\nstone_700 = \"#403d3d\"   # letra\norange_500 = \"#e06636\"   # - profit\nred_500 = \"#ef5350\"   # vermelha",
+        "detail": "src.view.global_color",
+        "documentation": {}
+    },
+    {
+        "label": "green_900",
+        "kind": 5,
+        "importPath": "src.view.global_color",
+        "description": "src.view.global_color",
+        "peekOfCode": "green_900 = \"#263238\"   # + verde\nstone_700 = \"#403d3d\"   # letra\norange_500 = \"#e06636\"   # - profit\nred_500 = \"#ef5350\"   # vermelha",
+        "detail": "src.view.global_color",
+        "documentation": {}
+    },
+    {
+        "label": "stone_700",
+        "kind": 5,
+        "importPath": "src.view.global_color",
+        "description": "src.view.global_color",
+        "peekOfCode": "stone_700 = \"#403d3d\"   # letra\norange_500 = \"#e06636\"   # - profit\nred_500 = \"#ef5350\"   # vermelha",
+        "detail": "src.view.global_color",
+        "documentation": {}
+    },
+    {
+        "label": "orange_500",
+        "kind": 5,
+        "importPath": "src.view.global_color",
+        "description": "src.view.global_color",
+        "peekOfCode": "orange_500 = \"#e06636\"   # - profit\nred_500 = \"#ef5350\"   # vermelha",
+        "detail": "src.view.global_color",
+        "documentation": {}
+    },
+    {
+        "label": "red_500",
+        "kind": 5,
+        "importPath": "src.view.global_color",
+        "description": "src.view.global_color",
+        "peekOfCode": "red_500 = \"#ef5350\"   # vermelha",
+        "detail": "src.view.global_color",
+        "documentation": {}
+    },
+    {
+        "label": "insertUser",
+        "kind": 2,
+        "importPath": "src.view.main",
+        "description": "src.view.main",
+        "peekOfCode": "def insertUser():\n    name = name_input.get()\n    email = email_input.get()\n    phone = phone_input.get()\n    date_at = calendar_input.get()\n    state = state_input.get()\n    observations = observations_input.get()\n    completeList = [name, email, phone, date_at, state, observations]\n    if name == '':\n        messagebox.showerror('Error', 'O nome não pode ser vazio')",
+        "detail": "src.view.main",
+        "documentation": {}
+    },
+    {
+        "label": "updateUser",
+        "kind": 2,
+        "importPath": "src.view.main",
+        "description": "src.view.main",
+        "peekOfCode": "def updateUser():\n    try:\n        treePreviewData = tree.focus()\n        treePreviewDisc = tree.item(treePreviewData)\n        treePreviewList = treePreviewDisc['values']\n        userId = treePreviewList[0]\n        name_input.delete(0, 'end')\n        email_input.delete(0, 'end')\n        phone_input.delete(0, 'end')\n        calendar_input.delete(0, 'end')",
+        "detail": "src.view.main",
+        "documentation": {}
+    },
+    {
+        "label": "deleteUser",
+        "kind": 2,
+        "importPath": "src.view.main",
+        "description": "src.view.main",
+        "peekOfCode": "def deleteUser():\n    try:\n        treePreviewData = tree.focus()\n        treePreviewDisc = tree.item(treePreviewData)\n        treePreviewList = treePreviewDisc['values']\n        userId = treePreviewList[0]\n        delete_user.deleteUserDb(userId)\n        messagebox.showinfo('Successfully registered',\n                            'Os dados foram deletados com sucesso')\n        for widget in right.winfo_children():",
+        "detail": "src.view.main",
+        "documentation": {}
+    },
+    {
+        "label": "checkUser",
+        "kind": 2,
+        "importPath": "src.view.main",
+        "description": "src.view.main",
+        "peekOfCode": "def checkUser():\n    global tree\n    list_data: list = find_user.findUsers()\n    print(list_data)\n    list_header = ['ID', 'name', 'email',\n                   'telefone', 'data', 'estado', 'sobre']\n    tree = ttk.Treeview(right, selectmode='extended',\n                        columns=list_header, show='headings')\n    vsb = ttk.Scrollbar(right, orient='vertical', command=tree.yview)\n    hsb = ttk.Scrollbar(right, orient='horizontal', command=tree.xview)",
+        "detail": "src.view.main",
+        "documentation": {}
+    },
+    {
+        "label": "StartProgram",
+        "kind": 2,
+        "importPath": "src.view.main",
+        "description": "src.view.main",
+        "peekOfCode": "def StartProgram():\n    checkUser()\n    window.mainloop()",
+        "detail": "src.view.main",
+        "documentation": {}
+    },
+    {
+        "label": "window",
+        "kind": 5,
+        "importPath": "src.view.main",
+        "description": "src.view.main",
+        "peekOfCode": "window = Tk()\nwindow.title('')\nwindow.geometry('1043x473')\nwindow.configure(background=blue_100)\nwindow.resizable(width=FALSE, height=FALSE)\n# GRID\ntop_left = Frame(window, width=310, height=50, bg=stone_700, relief='flat')\ntop_left.grid(row=0, column=0)\nbutton_left = Frame(window, width=310, height=420, bg=blue_400, relief='flat')\nbutton_left.grid(row=1, column=0, padx=0, pady=1, sticky=NSEW)",
+        "detail": "src.view.main",
+        "documentation": {}
+    },
+    {
+        "label": "top_left",
+        "kind": 5,
+        "importPath": "src.view.main",
+        "description": "src.view.main",
+        "peekOfCode": "top_left = Frame(window, width=310, height=50, bg=stone_700, relief='flat')\ntop_left.grid(row=0, column=0)\nbutton_left = Frame(window, width=310, height=420, bg=blue_400, relief='flat')\nbutton_left.grid(row=1, column=0, padx=0, pady=1, sticky=NSEW)\nright = Frame(window, width=898, height=420, bg=blue_400, relief='flat')\nright.grid(row=0, column=1, rowspan=2, padx=1, pady=0, sticky=NSEW)\n# LABEL TITLE\ntitle = Label(top_left, text='Formulário de Consultoria', anchor=NW,\n              font=('Ivy 13 bold'), bg=stone_700, fg=zinc_300, relief='flat')\ntitle.place(x=10, y=20)",
+        "detail": "src.view.main",
+        "documentation": {}
+    },
+    {
+        "label": "button_left",
+        "kind": 5,
+        "importPath": "src.view.main",
+        "description": "src.view.main",
+        "peekOfCode": "button_left = Frame(window, width=310, height=420, bg=blue_400, relief='flat')\nbutton_left.grid(row=1, column=0, padx=0, pady=1, sticky=NSEW)\nright = Frame(window, width=898, height=420, bg=blue_400, relief='flat')\nright.grid(row=0, column=1, rowspan=2, padx=1, pady=0, sticky=NSEW)\n# LABEL TITLE\ntitle = Label(top_left, text='Formulário de Consultoria', anchor=NW,\n              font=('Ivy 13 bold'), bg=stone_700, fg=zinc_300, relief='flat')\ntitle.place(x=10, y=20)\ndef insertUser():\n    name = name_input.get()",
+        "detail": "src.view.main",
+        "documentation": {}
+    },
+    {
+        "label": "right",
+        "kind": 5,
+        "importPath": "src.view.main",
+        "description": "src.view.main",
+        "peekOfCode": "right = Frame(window, width=898, height=420, bg=blue_400, relief='flat')\nright.grid(row=0, column=1, rowspan=2, padx=1, pady=0, sticky=NSEW)\n# LABEL TITLE\ntitle = Label(top_left, text='Formulário de Consultoria', anchor=NW,\n              font=('Ivy 13 bold'), bg=stone_700, fg=zinc_300, relief='flat')\ntitle.place(x=10, y=20)\ndef insertUser():\n    name = name_input.get()\n    email = email_input.get()\n    phone = phone_input.get()",
+        "detail": "src.view.main",
+        "documentation": {}
+    },
+    {
+        "label": "title",
+        "kind": 5,
+        "importPath": "src.view.main",
+        "description": "src.view.main",
+        "peekOfCode": "title = Label(top_left, text='Formulário de Consultoria', anchor=NW,\n              font=('Ivy 13 bold'), bg=stone_700, fg=zinc_300, relief='flat')\ntitle.place(x=10, y=20)\ndef insertUser():\n    name = name_input.get()\n    email = email_input.get()\n    phone = phone_input.get()\n    date_at = calendar_input.get()\n    state = state_input.get()\n    observations = observations_input.get()",
+        "detail": "src.view.main",
+        "documentation": {}
+    },
+    {
+        "label": "name_label",
+        "kind": 5,
+        "importPath": "src.view.main",
+        "description": "src.view.main",
+        "peekOfCode": "name_label = Label(button_left, text='Nome', anchor=NW,\n                   font=('Ivy 10 bold'), bg=blue_400, fg=zinc_300, relief='flat')\nname_label.place(x=10, y=10)\nname_input = Entry(button_left, width=30, relief='solid', justify='left')\nname_input.place(x=15, y=40)\n# Email\nemail_label = Label(button_left, text='Email', anchor=NW,\n                    font=('Ivy 10 bold'), bg=blue_400, fg=zinc_300, relief='flat')\nemail_label.place(x=10, y=70)\nemail_input = Entry(button_left, width=30, relief='solid', justify='left')",
+        "detail": "src.view.main",
+        "documentation": {}
+    },
+    {
+        "label": "name_input",
+        "kind": 5,
+        "importPath": "src.view.main",
+        "description": "src.view.main",
+        "peekOfCode": "name_input = Entry(button_left, width=30, relief='solid', justify='left')\nname_input.place(x=15, y=40)\n# Email\nemail_label = Label(button_left, text='Email', anchor=NW,\n                    font=('Ivy 10 bold'), bg=blue_400, fg=zinc_300, relief='flat')\nemail_label.place(x=10, y=70)\nemail_input = Entry(button_left, width=30, relief='solid', justify='left')\nemail_input.place(x=15, y=100)\n# Phone number\nphone_label = Label(button_left, text='Telefone', anchor=NW,",
+        "detail": "src.view.main",
+        "documentation": {}
+    },
+    {
+        "label": "email_label",
+        "kind": 5,
+        "importPath": "src.view.main",
+        "description": "src.view.main",
+        "peekOfCode": "email_label = Label(button_left, text='Email', anchor=NW,\n                    font=('Ivy 10 bold'), bg=blue_400, fg=zinc_300, relief='flat')\nemail_label.place(x=10, y=70)\nemail_input = Entry(button_left, width=30, relief='solid', justify='left')\nemail_input.place(x=15, y=100)\n# Phone number\nphone_label = Label(button_left, text='Telefone', anchor=NW,\n                    font=('Ivy 10 bold'), bg=blue_400, fg=zinc_300, relief='flat')\nphone_label.place(x=10, y=130)\nphone_input = Entry(button_left, width=30, relief='solid', justify='left')",
+        "detail": "src.view.main",
+        "documentation": {}
+    },
+    {
+        "label": "email_input",
+        "kind": 5,
+        "importPath": "src.view.main",
+        "description": "src.view.main",
+        "peekOfCode": "email_input = Entry(button_left, width=30, relief='solid', justify='left')\nemail_input.place(x=15, y=100)\n# Phone number\nphone_label = Label(button_left, text='Telefone', anchor=NW,\n                    font=('Ivy 10 bold'), bg=blue_400, fg=zinc_300, relief='flat')\nphone_label.place(x=10, y=130)\nphone_input = Entry(button_left, width=30, relief='solid', justify='left')\nphone_input.place(x=15, y=160)\n# Date\ncalendar_label = Label(button_left, text='Data da consulta', anchor=NW,",
+        "detail": "src.view.main",
+        "documentation": {}
+    },
+    {
+        "label": "phone_label",
+        "kind": 5,
+        "importPath": "src.view.main",
+        "description": "src.view.main",
+        "peekOfCode": "phone_label = Label(button_left, text='Telefone', anchor=NW,\n                    font=('Ivy 10 bold'), bg=blue_400, fg=zinc_300, relief='flat')\nphone_label.place(x=10, y=130)\nphone_input = Entry(button_left, width=30, relief='solid', justify='left')\nphone_input.place(x=15, y=160)\n# Date\ncalendar_label = Label(button_left, text='Data da consulta', anchor=NW,\n                       font=('Ivy 8 bold'), bg=blue_400, fg=zinc_300,\n                       relief='flat')\ncalendar_label.place(x=10, y=190)",
+        "detail": "src.view.main",
+        "documentation": {}
+    },
+    {
+        "label": "phone_input",
+        "kind": 5,
+        "importPath": "src.view.main",
+        "description": "src.view.main",
+        "peekOfCode": "phone_input = Entry(button_left, width=30, relief='solid', justify='left')\nphone_input.place(x=15, y=160)\n# Date\ncalendar_label = Label(button_left, text='Data da consulta', anchor=NW,\n                       font=('Ivy 8 bold'), bg=blue_400, fg=zinc_300,\n                       relief='flat')\ncalendar_label.place(x=10, y=190)\ncalendar_input = DateEntry(button_left, width=13, background='dark',\n                           foreground='white', borderwidth=2, year=2023)\ncalendar_input.place(x=15, y=220)",
+        "detail": "src.view.main",
+        "documentation": {}
+    },
+    {
+        "label": "calendar_label",
+        "kind": 5,
+        "importPath": "src.view.main",
+        "description": "src.view.main",
+        "peekOfCode": "calendar_label = Label(button_left, text='Data da consulta', anchor=NW,\n                       font=('Ivy 8 bold'), bg=blue_400, fg=zinc_300,\n                       relief='flat')\ncalendar_label.place(x=10, y=190)\ncalendar_input = DateEntry(button_left, width=13, background='dark',\n                           foreground='white', borderwidth=2, year=2023)\ncalendar_input.place(x=15, y=220)\n# State\nstate_label = Label(button_left, text='Estado da consulta', anchor=NW,\n                    font=('Ivy 8 bold'), bg=blue_400, fg=zinc_300, relief='flat'",
+        "detail": "src.view.main",
+        "documentation": {}
+    },
+    {
+        "label": "calendar_input",
+        "kind": 5,
+        "importPath": "src.view.main",
+        "description": "src.view.main",
+        "peekOfCode": "calendar_input = DateEntry(button_left, width=13, background='dark',\n                           foreground='white', borderwidth=2, year=2023)\ncalendar_input.place(x=15, y=220)\n# State\nstate_label = Label(button_left, text='Estado da consulta', anchor=NW,\n                    font=('Ivy 8 bold'), bg=blue_400, fg=zinc_300, relief='flat'\n                    )\nstate_label.place(x=160, y=190)\nstate_input = Entry(button_left, width=14, relief='solid', justify='left')\nstate_input.place(x=160, y=220)",
+        "detail": "src.view.main",
+        "documentation": {}
+    },
+    {
+        "label": "state_label",
+        "kind": 5,
+        "importPath": "src.view.main",
+        "description": "src.view.main",
+        "peekOfCode": "state_label = Label(button_left, text='Estado da consulta', anchor=NW,\n                    font=('Ivy 8 bold'), bg=blue_400, fg=zinc_300, relief='flat'\n                    )\nstate_label.place(x=160, y=190)\nstate_input = Entry(button_left, width=14, relief='solid', justify='left')\nstate_input.place(x=160, y=220)\n# Observations\nobservations_label = Label(\n    button_left, text='Observações', anchor=NW, font=('Ivy 10 bold'),\n    bg=blue_400, fg=zinc_300, relief='flat'",
+        "detail": "src.view.main",
+        "documentation": {}
+    },
+    {
+        "label": "state_input",
+        "kind": 5,
+        "importPath": "src.view.main",
+        "description": "src.view.main",
+        "peekOfCode": "state_input = Entry(button_left, width=14, relief='solid', justify='left')\nstate_input.place(x=160, y=220)\n# Observations\nobservations_label = Label(\n    button_left, text='Observações', anchor=NW, font=('Ivy 10 bold'),\n    bg=blue_400, fg=zinc_300, relief='flat'\n)\nobservations_label.place(x=15, y=260)\nobservations_input = Entry(\n    button_left, width=30, relief='solid', justify='left'",
+        "detail": "src.view.main",
+        "documentation": {}
+    },
+    {
+        "label": "observations_label",
+        "kind": 5,
+        "importPath": "src.view.main",
+        "description": "src.view.main",
+        "peekOfCode": "observations_label = Label(\n    button_left, text='Observações', anchor=NW, font=('Ivy 10 bold'),\n    bg=blue_400, fg=zinc_300, relief='flat'\n)\nobservations_label.place(x=15, y=260)\nobservations_input = Entry(\n    button_left, width=30, relief='solid', justify='left'\n)\nobservations_input.place(x=15, y=290)\n# BUTTONS",
+        "detail": "src.view.main",
+        "documentation": {}
+    },
+    {
+        "label": "observations_input",
+        "kind": 5,
+        "importPath": "src.view.main",
+        "description": "src.view.main",
+        "peekOfCode": "observations_input = Entry(\n    button_left, width=30, relief='solid', justify='left'\n)\nobservations_input.place(x=15, y=290)\n# BUTTONS\ninsert = Button(button_left, command=insertUser, text='Enviar', width=10,\n                fg=zinc_300, font=('Ivy 7 bold'), bg=green_600,\n                overrelief='ridge', relief='raised'\n                )\ninsert.place(x=15, y=340)",
+        "detail": "src.view.main",
+        "documentation": {}
+    },
+    {
+        "label": "insert",
+        "kind": 5,
+        "importPath": "src.view.main",
+        "description": "src.view.main",
+        "peekOfCode": "insert = Button(button_left, command=insertUser, text='Enviar', width=10,\n                fg=zinc_300, font=('Ivy 7 bold'), bg=green_600,\n                overrelief='ridge', relief='raised'\n                )\ninsert.place(x=15, y=340)\nupdate = Button(button_left, command=updateUser, text='Atualizar', width=10, fg=zinc_300,\n                font=('Ivy 7 bold'), bg=orange_500, overrelief='ridge',\n                relief='raised'\n                )\nupdate.place(x=110, y=340)",
+        "detail": "src.view.main",
+        "documentation": {}
+    },
+    {
+        "label": "update",
+        "kind": 5,
+        "importPath": "src.view.main",
+        "description": "src.view.main",
+        "peekOfCode": "update = Button(button_left, command=updateUser, text='Atualizar', width=10, fg=zinc_300,\n                font=('Ivy 7 bold'), bg=orange_500, overrelief='ridge',\n                relief='raised'\n                )\nupdate.place(x=110, y=340)\ndelete = Button(button_left, command=deleteUser, text='Deletar', width=10, fg=zinc_300,\n                font=('Ivy 7 bold'), bg=red_500, overrelief='ridge',\n                relief='raised')\ndelete.place(x=205, y=340)\ndef checkUser():",
+        "detail": "src.view.main",
+        "documentation": {}
+    },
+    {
+        "label": "delete",
+        "kind": 5,
+        "importPath": "src.view.main",
+        "description": "src.view.main",
+        "peekOfCode": "delete = Button(button_left, command=deleteUser, text='Deletar', width=10, fg=zinc_300,\n                font=('Ivy 7 bold'), bg=red_500, overrelief='ridge',\n                relief='raised')\ndelete.place(x=205, y=340)\ndef checkUser():\n    global tree\n    list_data: list = find_user.findUsers()\n    print(list_data)\n    list_header = ['ID', 'name', 'email',\n                   'telefone', 'data', 'estado', 'sobre']",
+        "detail": "src.view.main",
+        "documentation": {}
+    }
+]
